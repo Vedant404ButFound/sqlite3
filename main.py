@@ -8,7 +8,7 @@ class DatabaseSQL:
 	def __init__(self,database_name,database_path=os.getcwd()):
 		self.database_name = database_name
 		self.database_path = database_path
-		self.con = sqlite3.connect(f"{self.database_path.replace('\\','/')}/{self.database_name}")
+		self.con = sqlite3.connect(f"{self.database_path}\\{self.database_name}")
 		self.cur = self.con.cursor()
 	
 	def create_table(self,table_name,columns):
